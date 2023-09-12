@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+main{
+    background: #e0e0e0;
+    /* width: 100%; */
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    
+}
+.library-repo{
+    width: 80%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    transition: 0.4s;
+
+}
+.card{
+    background-color: azure;
+    padding: 20px;
+    /* border-radius: 10px; */
+    margin: 15px;
+    width: 300px;
+    height: 300px;
+ border-radius: 20px;
+background: #e0e0e0;
+box-shadow:  -20px -20px 60px #bebebe,
+             20px 20px 60px #ffffff;
+    transition: 0.4s;
+    text-overflow: ellipsis;
+
+}
+
+
+
+.card > h2::before{
+    content: "Title: ";   
+   
+}
+
+.card > h3::before{
+    content: "Author: ";
+}
+
+.card >h4::before{
+    content: "Pages: ";
+}
+
+.new-book-form{   
+    justify-content: center;
+    flex-direction: column;
+    background-color: bisque;
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    display: flex;
+    z-index: 4;
+    position: absolute;
+    /* visibility:hidden; */
+}
+
+.new-book-btn{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    padding: 0.8rem;
+    background-color: #2dd4bf;
+    border: none;
+    transition: 0.4s ease-in-out;    
+}
+
+.new-book-btn:hover{
+    transform: scale(1.1);
+    box-shadow: 10px 15px 1px -3px rgba(0,0,0,0.9);
+    transition: 0.4s ease-in-out;
+}
+
+img{
+    width: 250px;
+    height: 50%;
+    object-fit: contain;
+}
+
+.remove-book-btn, .read-book-btn{
+    padding: 0.4rem;
+    margin: 5px;    
+    color: #f8fafc;
+    border: none;
+    
+}
+
+.remove-book-btn{
+    background-color: #e11d48;
+}
+
+.read-book-btn{
+    background-color: #7c3aed;
+}
+
+.new-book-form input{
+    padding: 0.3rem;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.add-book-btn{
+    padding: 0.3rem;
+    border-style: dashed;
+    background-color: #3b82f6;
+    color: whitesmoke;
+}
+
+.form-container{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    background-color: rgba(14, 12, 12, 0.5);
+    transition: 0.4s;
+    z-index: 3;
+}
